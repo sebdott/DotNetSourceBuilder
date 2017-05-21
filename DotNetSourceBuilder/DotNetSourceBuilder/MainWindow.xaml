@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DotNetSourceBuilder"
         mc:Ignorable="d"
-        Title="Visual Studio Manual Builder" Height="605.161" Width="883.884">
+        Title="DoNet Source Builder" Height="605.161" Width="883.884">
     <Grid Margin="0,10,2,2">
         <Grid.RowDefinitions>
 
