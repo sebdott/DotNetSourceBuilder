@@ -1,0 +1,47 @@
+﻿<Window x:Name="Visual_Studio_Manual_Builder" x:Class="DotNetSourceBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DotNetSourceBuilder"
+        mc:Ignorable="d"
+        Title="Visual Studio Manual Builder" Height="605.161" Width="883.884">
+    <Grid Margin="0,10,2,2">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="232*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnBuild" Content="Build" HorizontalAlignment="Left" Margin="322,39,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1" IsCancel="True" Click="btnBuild_Click" RenderTransformOrigin="0.544,4.75" Height="147"/>
+        <TextBox x:Name="txtSolutionPath" HorizontalAlignment="Left" Margin="10,40,0,440" TextWrapping="Wrap" Width="590" Grid.ColumnSpan="2" Text="F:\GIT\DotNetSourceBuilder\DemoSolution\CakeDemo.sln" 
+                 
+                 />
+        <Label Content="Solution File Location :" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="258" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="btnOpenFile" Content="Browse" Grid.Column="1" Margin="222,40,181,0" VerticalAlignment="Top" Click="btnOpenFile_Click" IsCancel="True" RenderTransformOrigin="-0.442,0.509" Height="22"/>
+        <CheckBox x:Name="chkCopyBuildBin" Content="Copy Build Bin to Another folder ?" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="230" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked"/>
+
+        <TextBox x:Name="txtDestinationBinPath" HorizontalAlignment="Left" Margin="10,125,0,355" TextWrapping="Wrap" Width="590" Grid.ColumnSpan="2" Text=".\CakeScript\TestDestinationPath" 
+               />
+        <Label x:Name="lblBuildDestinationFolder" Content="Build Destination Folder :" HorizontalAlignment="Left" Height="25" Margin="10,95,0,0" VerticalAlignment="Top" Width="258"  />
+
+        <Label Content="Output :" HorizontalAlignment="Left" Height="25" Margin="10,186,0,0" VerticalAlignment="Top" Width="258"/>
+
+        <TextBox  x:Name="txtOutput" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="336" Margin="10,216,0,-57" 
+                 VerticalAlignment="Top" Width="861" IsReadOnly="True" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.RowSpan="2"
+              
+                  />
+        <Label x:Name="lblExtensionPatternToCopy" Content="Extension Pattern To Copy" HorizontalAlignment="Left" Height="30" Margin="10,157,0,0" VerticalAlignment="Top" Width="166"  />
+        <TextBox x:Name="txtExtensionPattern" HorizontalAlignment="Left" Margin="181,161,0,316" TextWrapping="Wrap" Width="419" Grid.ColumnSpan="2" Text="*.dll;*.exe" 
+               />
+        <Button x:Name="btnOpenDestinationBinPath" Content="Browse" Grid.Column="1" HorizontalAlignment="Left" Margin="222,125,0,0" VerticalAlignment="Top" Width="81" Click="btnOpenDestinationBinPath_Click" IsCancel="True" Height="22"/>
+
+
+    </Grid>
+
+</Window>
