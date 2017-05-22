@@ -74,7 +74,8 @@ namespace DotNetSourceBuilder
         {
             using (System.Management.Automation.PowerShell PowerShellInstance = System.Management.Automation.PowerShell.Create())
             {
-                PowerShellInstance.AddScript("Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned");
+                //PowerShellInstance.AddScript("Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned");
+                PowerShellInstance.AddScript("Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass");
                 var results = PowerShellInstance.Invoke();
             }
         }
